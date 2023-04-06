@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <style>    
+    .infotable{
+        border: solid 1px rgb(25, 23, 23);
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        background-color: rgb(243, 236, 236);
+    }
+    /* Style for table header */
+    th {
+        background-color: #0999ec;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+      }
+      
+      /* Style for table data */
+    td {
+        border: 1px solid #0999ec;
+        text-align: left;
+        padding: 10px;
+      }
+    </style>
+</head>
+<body>
+    <div class="infotable">
+       
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>FIRSTNAME</th>
+                <th>LASTNAME</th>
+                <th>EMAIL</th>
+                <th>DOB</th>
+                <th>GENDER</th>
+                <th>ADDRESS1</th>
+                <th>ADDRESS2</th>
+                <th>CITY</th>
+                <th>ZIPCODE</th>
+                <th>COUNTRY</th>
+            </tr>
+            
+            <% s.forEach((data)=>{%>
+            <tr>
+            <td><%=data.id  %></td>
+            <td><%= data.firstname %></td>
+            <td><%= data.lastname %></td>
+            <td><%= data.email %></td>
+            <td><%= data.dob %></td>
+            <td><%= data.gender %></td>
+            <td><%= data.address_line_1 %></td>
+            <td><%= data.address_line_2 %></td>
+            <td><%= data.city %></td>
+            <td><%= data.zipcode %></td>
+            <td><%= data.country %></td>
+        </tr>
+            <%})%>
+        </table>
+    </div>
+</body>
+</html>
